@@ -1,5 +1,7 @@
 ﻿using FinalCountdown;
-using System;
 
 var clockView = new ClockView();
-clockView.Update();
+
+var programLoop = new ProgramLoop(clockView);
+programLoop.Run();
+programLoop.ClearAfterRun();
