@@ -18,6 +18,12 @@ namespace FinalCountdown
         private void PrepareRawForm()
         {
             WriteLabel(FormLabelName.ProgramHeader);
+            WriteLabel(FormLabelName.TimeLeftLabel);
+            WriteLabel(FormLabelName.DaysLeftLabel);
+            WriteLabel(FormLabelName.HoursLeftLabel);
+            WriteLabel(FormLabelName.MinutesLeftLabel);
+            WriteLabel(FormLabelName.SecondsLeftLabel);
+            WriteLabel(FormLabelName.EscapeLabel);
         }
 
         private void WriteLabel(FormLabelName formLabelName)
