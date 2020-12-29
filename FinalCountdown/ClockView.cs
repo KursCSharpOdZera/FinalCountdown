@@ -20,6 +20,7 @@ namespace FinalCountdown
         public void Update()
         {
             _clock = new Clock();
+            UpdateNewYearLabel();
             UpdateNumbers();
         }
 
@@ -40,6 +41,15 @@ namespace FinalCountdown
                 (
                     text:           _formLabels[formLabelName].Literal,
                     cursorPosition: _formLabels[formLabelName].CursorPosition
+                );
+        }
+
+        private void UpdateNewYearLabel()
+        {
+            ConsoleHelper.WriteAtCursorPosition
+                (
+                    text:           DescriptionCalculator.Calculate(_clock),
+                    cursorPosition: _formFieldCursorPositions[FormFieldName.NewYearLabel]
                 );
         }
 
