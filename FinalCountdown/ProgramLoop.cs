@@ -25,6 +25,11 @@ namespace FinalCountdown
             } while (_programLoopStop == false);
         }
 
+        public void ClearAfterRun()
+        {
+            Console.Clear();
+        }
+
         private void CaptureEscButton()
         {
             if (Console.KeyAvailable)
